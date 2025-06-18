@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>React para iniciantes</title>
+
+  <!-- Carrega o React, React Dom e Babel -->
+<script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+<!-- Don't use this in production: -->
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+</head>
+
+<body>
+  <div id="root"></div>
+
+  <script type="text/babel">;
+    
+    const Button = () => {
+      return <button>comprar</button>;
+    }
+
+    const MainNav = () =>{
+      return <nav>
+        <ul>
+          <li><a href="https://github.com/lucasbrito13">GitHub</a></li>;
+          <li><a href="https://www.instagram.com/l.brito13/#">Instagram</a></li>;
+          </ul>
+        </nav>
+    }
+
+    const Produtos = () => {
+      const produto1 = 'camisa';
+      const produto2 = 'bermuda';
+
+      function handleClick(event) {
+        alert(`Você comprou o item ${event.target.innerText}` );
+      }
+      return <div>
+        <button onClick={handleClick}>{produto1} - R$ {Math.random()}</button>
+        <button onClick={handleClick}>{produto2} - R$ {Math.random()}</button>
+        </div>
+    }
+
+    const Compras = () => {
+      const [count, setCount] = React.useState(0);
+      
+      function handleClick () {
+        setCount(count + 1);
+      }
+      
+      return <div>
+        <button onClick={handleClick}>Comprar: {count}</button>
+        <p>Total: {count}</p>
+        <p>Preço: {count *250}</p>
+        </div>
+    }
+
+    const App = () =>{
+      return <div>
+        <h1>Informações em React</h1>
+        <MainNav />
+        <Produtos />
+        <Button />
+        <Compras />
+        </div>;
+    }
+
+    const container = document.getElementById('root');
+    const root = ReactDOM.createRoot(container);
+    root.render(<App />);
+
+
+  </script>
+</body>
+
+</html>
