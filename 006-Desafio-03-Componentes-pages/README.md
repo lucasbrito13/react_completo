@@ -1,12 +1,50 @@
-# React + Vite
+# 🧩 Desafio de Componentes com React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto foi desenvolvido como parte de um desafio prático em React, com o objetivo de aplicar conceitos como **componentização**, **props**, **renderização condicional** e uso do objeto `window.location` para simular rotas simples.
 
-Currently, two official plugins are available:
+## 📋 Descrição do desafio
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+O exercício consistia em:
 
-## Expanding the ESLint configuration
+- Reproduzir uma interface apresentada em aula.
+- Utilizar a array de produtos fornecida para exibir informações dinamicamente.
+- Dividir o código em **componentes reutilizáveis**, como `Titulo`, `Produto` e `Header`.
+- Simular navegação entre páginas (Home e Produtos) utilizando:
+  ```js
+  const { pathname } = window.location;
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📁 Estrutura de Arquivos
+
+```text
+src/
+├── App.jsx
+├── Header.jsx
+├── Home.jsx
+├── Produto.jsx
+├── Produtos.jsx
+├── Titulo.jsx
+└── main.jsx
+```
+
+## 🧪 Array de produtos usada
+```js
+const produtos = [
+  { nome: 'Notebook', propriedades: ['16gb ram', '512gb'] },
+  { nome: 'Smartphone', propriedades: ['2gb ram', '128gb'] },
+];
+```
+
+## 🛠️ Tecnologias utilizadas
+- React
+- Vite (ambiente de desenvolvimento)
+- JavaScript (ES6+)
+- HTML5 & CSS3 (via JSX inline styles)
+
+## ✨ Resultado esperado
+- Página inicial com título "Home" e descrição do desafio.
+- Página "Produtos" com dois produtos listados, cada um com suas propriedades.
+- Navegação simples entre as páginas via URL.
+
+## 📌 Observações
+- Este projeto não utiliza bibliotecas de roteamento como react-router-dom. A navegação é controlada manualmente via window.location.pathname.
+- O projeto foca na prática de componentização e props no React.
