@@ -1,12 +1,47 @@
-# React + Vite
+# 🧩 Desafio 011: useContext - React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este é um projeto simples em React que utiliza o useContext para centralizar e compartilhar dados de uma API entre componentes. Ao carregar o app, os produtos são buscados automaticamente da Ranek API e disponibilizados globalmente via contexto.
 
-Currently, two official plugins are available:
+## 🔧 Tecnologias utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React
+- Fetch API
+- Componentes funcionais
+- useState
+- useEffect
+- useContext
+- Context API
 
-## Expanding the ESLint configuration
+## 📦 Funcionalidades
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Busca automática dos produtos da API ao iniciar o app
+- Armazena os dados no contexto global
+- Botão "Limpar Dados" para limpar os dados da tela
+- Botão "Voltar Dados" para restaurar os dados via API
+- Renderização condicional com mensagem quando não há dados
+- Organização em componentes reutilizáveis
+
+## 📁 Estrutura do projeto
+```
+src/
+├── App.jsx
+├── Produto.jsx
+├── ContextoGlobal.jsx
+```
+
+## 🚀 Como usar
+
+1. Clone o repositório
+2. Instale as dependências com `npm install` ou `yarn`
+3. Rode o projeto com `npm run dev` (caso esteja usando Vite)
+4. Acesse http://localhost:5173 no navegador
+
+## 📷 Preview
+
+![Preview 1](public/limpardados.png)
+![Preview 2](public/voltardados.png)
+
+## 📝 Licença
+
+Este projeto é apenas para fins educacionais.
+
